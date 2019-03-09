@@ -52,10 +52,10 @@ const mapStateToProps = (state)=> {
       isModalOpen:modal.isModalOpen,
       imageDetails: electedImage
     }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    close:()=>dispatch(closeModal())
   }
-  const mapDispatchToProps = dispatch => {
-    return {
-      close:()=>dispatch(closeModal())
-    }
-  }
+}
 export default connect(mapStateToProps, mapDispatchToProps)(ImageDisplyModal);

@@ -8,16 +8,16 @@ const isActive=(imgType)=>{
     return props.imageType===imgType;
 }
 const getClassName=(imgType)=>{
-    return isActive(imgType)?'navigation__link--active':'navigation__link';
+    return isActive(imgType)?'navigation-link--active':'navigation-link';
 }
 
 return(
     <nav className='navigation-container'>
         <ul className="navigation">
-            <li className="navigation__item">
+            <li className="navigation-item">
                 <button onClick={()=>props.loadImage('animals') }   className={getClassName('animals')}>ANIMALS</button>
             </li>
-            <li className="navigation__item">
+            <li className="navigation-item">
                 <button onClick={()=>props.loadImage('fruitveg')}   className={getClassName('fruitveg')}>FRUITS & VEG</button>
             </li>
         </ul>

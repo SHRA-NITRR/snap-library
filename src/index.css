@@ -13,13 +13,6 @@ code {
     monospace;
 }
 
-.center{
-    margin: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 .app-container{
   display: flex;
   flex-direction: column;
@@ -30,6 +23,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .image-block{
   display: flex;
   background-color: #f1f1f1;
@@ -40,9 +34,11 @@ code {
   border: none;
   box-shadow: 0 1px 4px rgba(0,0,0,.175);
 }
+
 .image-block:hover, a:hover{
   cursor: pointer;
 }
+
 .image-details-container{
   padding: 0.8rem 0;
   display: flex;
@@ -59,16 +55,19 @@ code {
   display: flex;
   flex-direction: row;
 }
+
 .image-details .attribute{
   flex:1.5;
   display: flex;
   color:#9f7006;
 }
+
 .image-details .value{
   flex:3;
   display: flex;
   text-align: left;
 }
+
 .image-header{
   font-size: 1.2rem;;
   color: #F37A20;
@@ -82,6 +81,7 @@ code {
 img {
   vertical-align: middle;
 }
+
 .thumbnail{
   display: flex;
 }
@@ -89,6 +89,7 @@ img {
 .thumnail-image{
   height: 4.5rem;
 }
+
 .image-placeholder{
   height:500px;
   width:650px;
@@ -102,6 +103,7 @@ img {
   display: flex;
   margin-bottom: 2rem;
 }
+
 .navigation {
   display: flex;
   margin: 0;
@@ -113,6 +115,7 @@ img {
   border-right: 3px solid #F37A20;
   padding-right: 2rem;
 }
+
 .app-name {
   display: flex;
   align-items: center;
@@ -122,29 +125,33 @@ img {
   padding-left: 5rem;
   color: #F5851F;
 }
-.navigation .navigation__item {
+
+.navigation .navigation-item {
   position: relative;
   align-self: center;
   margin-right: 3rem;
   font-weight: 400;
 }
-.navigation .navigation__item .navigation__link{
+
+.navigation .navigation-item .navigation-link{
     font-size: 21px;
     color: #F5851F;
     text-transform: uppercase;
 }
-.navigation__item:hover .navigation__link:not(.navigation__link--active):after {
+
+.navigation-item:hover .navigation-link:not(.navigation-link--active):after {
   content: '';
   opacity: 1;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-.navigation__link--active {
+
+.navigation-link--active {
   color: #4DBFB9;
   font-size: 21px;
 }
 
-.navigation__link--active:after {
+.navigation-link--active:after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -157,7 +164,7 @@ img {
           animation: activeMenu 10s infinite ease-in-out;
 }
 
-.navigation__link:not(.navigation__link--active):after {
+.navigation-link:not(.navigation-link--active):after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -175,7 +182,7 @@ img {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-.navigation__item:hover .navigation__link:not(.navigation__link--active):after {
+.navigation-item:hover .navigation-link:not(.navigation-link--active):after {
   content: '';
   opacity: 1;
   -webkit-transform: scaleX(1);
