@@ -23,8 +23,6 @@ export const loadImage = (imageType='animals') => {
           return null;
       }
   };
-        
-
 };
 
 
