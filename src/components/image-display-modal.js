@@ -36,7 +36,7 @@ const ImageDisplyModal=(props)=>{
                         <div className='value'>{imageDetails.Genus|| '-'}</div>
                     </div>
                     <div className="image-details">  
-                        <div className='attribute'>Descr</div>
+                        <div className='attribute'>Description</div>
                         <div className='value'>{imageDetails.Description}</div> 
                     </div>
                   </div>

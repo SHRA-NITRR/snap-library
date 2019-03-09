@@ -11,16 +11,20 @@ export const closeModal = (imgId) => ({
 })
 
 export const loadImage = (imageType='animals') => {
-    return (dispatch) => {
-        return imageRepository.getImages(imageType)
-            .catch(() => null)
-            .then((response) => {
-                dispatch({
-                    images: response,
-                    imageType,
-                    type: actions.LOAD_IMAGES
-                });
-            });
-    };
+    return async (dispatch) => {
+        try {
+          const response = await imageRepository.getImages(imageType);   
+          dispatch({
+            images: response,
+            imageType,
+            type: actions.LOAD_IMAGES
+        });
+      } catch (error) {
+          return null;
+      }
+  };
+        
+
 };
+
 

@@ -1,15 +1,10 @@
 import { combineReducers } from 'redux'
-import {
-  SELECT_IMAGE,
-  SELECT_PLAYLIST,
-  LOAD_IMAGES,
-  CLOSE_MODAL
-} from '../actions'
+import * as actions from '../actions';
 
 const selectedImg = (state = {imgId:0}, action) => {
   switch (action.type) {
 
-    case SELECT_IMAGE:
+    case actions.SELECT_IMAGE:
       return {
         imgId:action.imgId  
     }
@@ -22,7 +17,7 @@ const selectedImg = (state = {imgId:0}, action) => {
 const imageState = (state = {imageList:[], imageType:'animals'}, action) => {
   switch (action.type) {
 
-    case LOAD_IMAGES:
+    case actions.LOAD_IMAGES:
       return {
         imageList:action.images,
         imageType:action.imageType
@@ -35,12 +30,12 @@ const imageState = (state = {imageList:[], imageType:'animals'}, action) => {
 const modal = (state = {isModalOpen:false}, action) => {
   switch (action.type) {
 
-    case SELECT_IMAGE:
+    case actions.SELECT_IMAGE:
       return {
         isModalOpen:true
       }
     
-    case CLOSE_MODAL:
+    case actions.CLOSE_MODAL:
       return {
         isModalOpen:false
       }
