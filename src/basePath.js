@@ -1,0 +1,1 @@
+export const basePath='http://styleguide.effectivedigital.com/interview/api'
